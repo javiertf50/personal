@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje Bonito</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #000000; /* Fondo negro */
+            color: white; /* Texto blanco */
+            background-image: url('https://www.w3schools.com/w3images/lights.jpg'); /* Fondo con imagen */
+            background-size: cover;
+            background-position: center;
+            animation: bgAnimation 30s infinite;
+        }
+        h1 {
+            color: #FFD700; /* Color dorado */
+            font-size: 50px;
+            animation: pulse 1.5s infinite;
+            text-shadow: 3px 3px 10px rgba(255, 215, 0, 0.6); /* Sombra dorada */
+        }
+        .hearts {
+            font-size: 50px;
+            color: #FF1493; /* Color corazón */
+            animation: heartbeat 1.5s infinite;
+            margin-top: 20px;
+        }
+        .message {
+            font-size: 24px;
+            color: #FFD700; /* Dorado */
+            margin: 20px 0;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.4); /* Sombra suave */
+            opacity: 0;
+            animation: fadeIn 3s ease-in forwards;
+        }
+        .sub-message {
+            font-size: 20px;
+            color: #FFD700;
+            margin-top: 10px;
+            opacity: 0;
+            animation: fadeIn 3s ease-in 1s forwards;
+        }
+        .writing-effect {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 22px;
+            color: #FF69B4;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 4px solid #FF69B4;
+            width: 0;
+            animation: typing 4s steps(30) 1s forwards;
+        }
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes pulse {
+            0% {
+                color: #FFD700;
+            }
+            50% {
+                color: #FFEB8C;
+            }
+            100% {
+                color: #FFD700;
+            }
+        }
+        @keyframes bgAnimation {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes typing {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        /* Estilo del regalo */
+        .gift-box {
+            font-size: 70px;
+            cursor: pointer;
+            margin-top: 30px;
+            animation: pulse 1s infinite;
+            display: inline-block;
+        }
+
+        /* Estilo del mensaje oculto */
+        .hidden-message {
+            display: none;
+            font-size: 22px;
+            color: #FFD700;
+            margin-top: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.4);
+            opacity: 0;
+            animation: fadeIn 3s ease-in 1s forwards; /* Animación */
+        }
+
+        /* Estilo del texto "Clickeame" */
+        .click-text {
+            font-size: 24px;
+            color: #FF69B4;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+            text-decoration: underline;
+            animation: pulse 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1>Para ti, mi amor de mi vida 💖</h1>
+    <div class="hearts">❤️❤️❤️❤️❤️❤️❤️❤️</div>
+    <p class="message">Te amo mucho y cada día me haces más feliz. ❤️</p>
+    <div class="hearts">❤️❤️❤️❤️❤️❤️❤️❤️</div>
+    <p class="sub-message">Eres la razón por la que sonrío todos los días. Gracias por ser tú. 🌟</p>
+    <p class="sub-message">Siempre juntos, hoy y siempre.Jv + JH 💫</p>
+
+    <p class="writing-effect">Y quiero pasar mi vida contigo. 💍</p>
+    <p class="writing-effect">Te amo mi Jhoshy amada feliz aniversario ❤️❤️🔥 💍</p>
+
+    <!-- Caja de regalo con mensaje "Clickeame" -->
+    <div class="gift-box" onclick="showMessage()">🎁</div>
+    <p class="click-text">Clickeame para ver algo especial 💖</p>
+
+    <!-- Mensaje oculto que se muestra al hacer clic en el regalo -->
+    <div class="hidden-message" id="specialMessage">
+        Eres todo lo que he soñado una vez, eres la princesa que conquistó mi corazón, eres mi amada linda, te amo y quiero estar contigo día y noche a tu lado. Por eso te quiero decir: te amo y te amaré por siempre, mi Jhoshysita de mi vida. JV + JH = for ever
+    </div>
+
+    <!-- Script para mostrar el mensaje -->
+    <script>
+        function showMessage() {
+            // Mostrar el mensaje oculto
+            document.getElementById('specialMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
